@@ -1,0 +1,218 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #297094;
+}
+.BirthdayCard{
+    position: relative;
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+.BirthdayCard:hover {
+    transform: perspective(2500px)rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,.15),0 10px 100px rgba(0,0,0,0.3);
+}
+.BirthdayCard:hover .cardFront {
+    transform: rotateY(-160deg);
+}
+.BirthdayCard:hover .front-text {
+display: none;
+}
+.BirthdayCard:hover .wrap-decor {
+    display: none;
+}
+.BirthdayCard:hover .wrap-decorTwo {
+    display: none;
+}
+.BirthdayCard:hover .plate {
+    display: none;
+}
+.cardFront{
+    position: absolute;
+    background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    transform-origin: left;
+    z-index: 2;
+    transition: transform 0.6s;
+}
+.inside-card{
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex; 
+    flex-direction: row; 
+    box-shadow: inset 10px 10px 20px rgba(0,0,0,0.1);
+    backface-visibility: hidden;
+}
+
+.happy,.to-you{
+    position: relative;
+    font-family: didot;
+    text-align: center;
+    backface-visibility: hidden;
+    font-size: 30px;
+}
+.happy{
+    top: 198px;
+}
+.to-you{
+    top: 123px;
+}
+.mom{
+    position: relative;
+    font-family: Arial;
+    font-size: 35px;
+    text-align: center;
+    top: 120px;
+}
+
+.b-day{
+    position: relative;
+    font-family: Arial;
+    font-size: 35px;
+    text-align: center;
+    top: 163px;
+}
+.wrap-decor{
+    position: absolute;
+    top: -230px;
+    left: -200px;
+}
+.decorations{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    border: 3px solid #02b4d7;
+    border-radius: 50%;
+}
+.decorations:before, .decorations::after, .decorationsTwo::before, .decorationsTwo::after, 
+.decorationsThree::before, .decorationsThree::after{
+    content: "";
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    width: 0;
+    height: 0;
+}
+.decorations:before{
+    border-top: 40px solid #f15bb5;
+    top: 297px;
+    left: 210px;
+    transform: rotate(-5deg);
+}
+.decorations::after {
+border-top: 40px solid #f4d35e;
+top: 288px;
+left: 260px;
+transform: rotate(-17deg);
+}
+.decorationsTwo::before {
+    border-top: 40px solid #88f5;
+    top: 268px;
+    left: 315px;
+    transform: rotate(-30deg);
+}
+.decorationsTwo::after,.decorationsThree::after{
+    border-top: 40px solid #9b5de5;
+    top: 238px;
+    left: 355px;
+    transform: rotate(-40deg);
+}
+.wrap-decorTwo {
+     position: absolute;
+    top: -230px;
+    left: 445px;
+    transform: scaleX(-1);
+}
+.decorationsThree::before {
+    border-top: 40px solid #88bbf9;
+    top: 268px;
+    left: 315px;
+    transform: rotate(-30deg);
+}
+.plate {
+    position: absolute;
+    width: 130px;
+    height: 5px;
+    background-color: #88bbf9;
+    left: 60px;
+    top: 213px;
+}
+.cake{
+    position: absolute;
+    overflow: hidden;
+    width: 100px;
+    height: 50px;
+    background-color: #f15bb5;
+    left: 20px;
+    top: -50px;
+    box-shadow: inset 0 -15px #432818;
+}
+cake:before{
+    content: "";
+    position: absolute;
+    background-color: #432818;
+    width: 10px;
+    height: 20px;
+    top: 5px;
+    border-radius: 20px;
+    box-shadow: 10px 5px #f15bb5,20px 0px #432818, 30px 2px #f15bb5,40px 5px #432818, 50px 5px #f15bb5,
+    60px 0px #432818,70px 5px #f15bb5,80px 5px #432818,90px 5px #f15bb5;
+}
+.plate:before{
+    content: "";
+    position: absolute;
+    background:repeating-linear-gradient(-45deg, #9b5de5,#9b5de5 3px, #00f5d4 3px, #00f5d4 6px);
+    width: 7px;
+    height: 25px;
+    top: -75px;
+    left: 61px;
+}
+.plate:after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 5px;
+    background-color: #333;
+    top: -80px;
+    left: 64px;
+}
+.flame {
+    position: absolute;
+    background-color: #fb5607;
+    width: 15px;
+    height: 15px;
+    opacity: 0.7;
+    top: -93px;
+    left: 57px;
+    transform: rotate(-45deg);
+}
+.inside-text{
+    position: absolute;
+    top: 100%;
+    left:100%;
+    transform: translate(-100%, -100%);
+    text-align: center;
+    width:100%;
+}
+.Wishes{
+    font-family: 'Brush Script MT', cursive;
+    font-size: 18px;
+    color: #333;
+}
+p{
+    font-family: 'Brush Script MT',cursive;
+    color: #333;
+}
+
+
